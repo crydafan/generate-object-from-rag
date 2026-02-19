@@ -1,10 +1,10 @@
-from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 
 from infer_candidates import infer_candidate_fuzzy
-from query_database import get_context_text_from_query
-from prompt_template import get_prompt_with_context
 from models.candidate_model import Candidate
+from prompt_template import get_prompt_with_context
+from query_database import get_context_text_from_query
 
 # Load environment variables from .env file
 load_dotenv()

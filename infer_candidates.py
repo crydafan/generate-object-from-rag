@@ -1,5 +1,6 @@
-from rapidfuzz import process, fuzz
 from pathlib import Path
+
+from rapidfuzz import fuzz, process
 
 DATA_PATH = "data/hojas-vida"
 

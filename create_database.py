@@ -1,12 +1,13 @@
-from langchain_community.document_loaders import DirectoryLoader, PDFPlumberLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_core.documents import Document
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
-from dotenv import load_dotenv
-from pathlib import Path
 import os
 import shutil
+from pathlib import Path
+
+from dotenv import load_dotenv
+from langchain_community.document_loaders import DirectoryLoader, PDFPlumberLoader
+from langchain_community.vectorstores import Chroma
+from langchain_core.documents import Document
+from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Load environment variables from .env file
 load_dotenv()
