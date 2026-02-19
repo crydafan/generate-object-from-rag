@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env
+.venv/
+
+# IDE & OS
+.vscode/
+.DS_Store
+
+# Logs & databases
+*.log
+*.sqlite3
+*.db
+
+# Chroma
+chroma/
+
+# Project data
+data/
