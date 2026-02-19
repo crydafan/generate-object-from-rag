@@ -11,7 +11,7 @@ load_dotenv()
 
 
 def main():
-    query_text = "Provide details such as name, age (infer from birth date), and DNI for the candidate Alfonso Lopez Chau."
+    query_text = "Provide details such as name, birth date and DNI for the candidate Alfonso Lopez Chau."
 
     inferred_candidate = infer_candidate_fuzzy(query_text)
     if inferred_candidate is None:
