@@ -31,13 +31,17 @@ def main():
     model_with_structure = model.with_structured_output(Candidate)
 
     prompt = get_prompt_with_context(context_text, query_text)
+
     response = model_with_structure.invoke(prompt)
+    if not isinstance(response, Candidate):
+        print("The model's response could not be parsed into the Candidate structure.")
+        return
 
     sources = [doc.metadata.get("source", None) for doc, _ in results]
 
     print("Prompt:", prompt)
     print("Sources:", sources)
-    print("Object:", response)
+    print("Object:", response.model_dump_json())
 
 
 if __name__ == "__main__":
